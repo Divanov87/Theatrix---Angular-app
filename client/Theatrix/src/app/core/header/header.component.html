@@ -1,143 +1,135 @@
 <header class="header" data-header>
 
-    <div class="container">
+  <div class="container">
 
-      <div class="overlay" data-overlay></div>
+    <div class="overlay" data-overlay></div>
 
-      <a routerLink="" class="logo">
-        <img src="assets/images/logo.png" alt="Theatrix logo">
-      </a>
+    <a routerLink="" class="logo">
+      <img src="/assets/images/logo.png" alt="Theatrix logo">
+    </a>
 
-      <div class="header-actions">
+    <div class="header-actions">
 
-        <div class="lang-wrapper">
-          <label for="language">
-            <!-- <ion-icon name="globe-outline"></ion-icon> -->
-          </label>
+      <div class="lang-wrapper">
+        <label for="language">
+          <!-- <ion-icon name="globe-outline"></ion-icon> -->
+        </label>
 
-          <select name="language" id="language">
-            <option value="en">EN</option>
-            <option value="bg">BG</option>
-          </select>
-        </div>
-        
-        <!-- {{#unless user}} -->
-        <a routerLink="/auth/register" class="navbar-link">
-          <button class="btn btn-primary">Sign in</button>
-        </a>
-        <!-- {{/unless}} -->
+        <select name="language" id="language">
+          <option value="en">EN</option>
+          <option value="bg">BG</option>
+        </select>
       </div>
 
-      <button class="menu-open-btn" data-menu-open-btn>
-        <!-- <ion-icon name="reorder-three"></ion-icon> -->
-      </button>
+      <!-- {{#unless user}} -->
+      <a routerLink="/auth/register" class="navbar-link">
+        <button class="btn btn-primary">Sign in</button>
+      </a>
+      <!-- {{/unless}} -->
+    </div>
 
-      <nav class="navbar" data-navbar>
+    <button class="menu-open-btn" data-menu-open-btn>
+      <!-- <ion-icon name="reorder-three"></ion-icon> -->
+    </button>
 
-        <div class="navbar-top">
+    <nav class="navbar" data-navbar>
 
-          <a routerLink="/" class="logo">
-            <img src="assets/images/logo.png" alt="Theatrix logo">
-          </a>
+      <div class="navbar-top">
 
-          <button class="menu-close-btn" data-menu-close-btn>
-            <!-- <ion-icon name="close-outline"></ion-icon> -->
+        <a routerLink="/" class="logo">
+          <img src="assets/images/logo.png" alt="Theatrix logo">
+        </a>
+
+        <button class="menu-close-btn" data-menu-close-btn>
+          <!-- <ion-icon name="close-outline"></ion-icon> -->
+        </button>
+
+      </div>
+
+      <ul class="navbar-list">
+
+        <!-- {{#unless user}} -->
+
+        <li>
+          <a routerLink="/" class="navbar-link">Home</a>
+        </li>
+
+
+        <li class="dropdown">
+          <button class="dropbtn">
+            <a routerLink="/events/" class="navbar-link">Events <i class='bx bxs-chevron-down'></i></a>
           </button>
 
-        </div>
+          <div class="dropdown-content">
+            <a routerLink="/events/theater" class="navbar-link">Theater</a>
+            <a routerLink="/events/concerts" class="navbar-link">Concerts</a>
+          </div>
+        </li>
 
-        <ul class="navbar-list">
-
-          <!-- {{#unless user}} -->
-
-         <li>
-            <a routerLink="/" class="navbar-link">Home</a>
-          </li>
-
-   
-            <li class="dropdown">
-              <button class="dropbtn">
-                <a routerLink="/events/" class="navbar-link">Events <i class='bx bxs-chevron-down'></i></a>
-              </button>
-
-              <div class="dropdown-content">
-                <a routerLink="/events/theater" class="navbar-link">Theater</a>
-                <a routerLink="/events/concerts" class="navbar-link">Concerts</a>
-              </div>
-            </li>
-
-          <li>
-            <a routerLink="/search" class="navbar-link">Search</a>
-          </li>
-<!-- 
+        <li>
+          <a routerLink="/search" class="navbar-link">Search</a>
+        </li>
+        <!-- 
           {{/unless}}
 
           {{#if user}} -->
-          <!-- <li>
+        <!-- <li>
             <a routerLink="/events/" class="navbar-link">My Events</a>
           </li>
-          <li>
-            <a routerLink="/search" class="navbar-link">Search</a>
-          </li>
-          <li>
-            <a routerLink="/events/theater" class="navbar-link">Theater</a>
-          </li>
-          <li>
-            <a routerLink="/events/concerts" class="navbar-link">Concerts</a>
-          </li> -->
-          <!-- {{#if isUser}} -->
-          <!-- <li>
+        -->
+        <!-- {{#if isUser}} -->
+        <!-- <li>
             <a routerLink="/profile" class="navbar-link">Profile</a>
           </li> -->
-          <!-- {{/if}}
+        <!-- {{/if}}
           {{#if isAdmin}} -->
-          <li>
-            <a routerLink="/events/add" class="navbar-link">Add Event</a>
-          </li>
-          <!-- {{/if}} -->
-          <li>
-            <a routerLink="/auth/logout" class="navbar-link">Logout</a>
-          </li>
-          <!-- {{else}} -->
-          <li>
-            <a routerLink="/auth/register" class="navbar-link">Register</a>
-          </li>
-          <li>
-            <a routerLink="/auth/login" class="navbar-link">Login</a>
-          </li>
-          <!-- {{/if}} -->
-          <li>
-            <a routerLink="/contacts" class="navbar-link">Contacts</a>
-          </li>
-          <li>
-            <a routerLink="/about" class="navbar-link">About</a>
-          </li>
-        </ul>
+        <!-- <li>
+          <a routerLink="/events/add" class="navbar-link">Add Event</a>
+        </li> -->
+        <!-- {{/if}} -->
+        <!-- <li>
+          <a routerLink="/auth/logout" class="navbar-link">Logout</a>
+        </li> -->
+        <!-- {{else}} -->
+        <li>
+          <a routerLink="/auth/register" class="navbar-link">Register</a>
+        </li>
+        <li>
+          <a routerLink="/auth/login" class="navbar-link">Login</a>
+        </li>
+        <!-- {{/if}} -->
+        <li>
+          <a routerLink="/contacts" class="navbar-link">Contacts</a>
+        </li>
+        <li>
+          <a routerLink="/about" class="navbar-link">About</a>
+        </li>
+      </ul>
 
-        <ul class="navbar-social-list">
+      <ul class="navbar-social-list">
 
 
-          <li>
-            <a routerLink="#" class="navbar-social-link">
-              <!-- <ion-icon name="logo-facebook"></ion-icon> -->
-            </a>
-          </li>
+        <li>
+          <a routerLink="#" class="navbar-social-link">
+            <!-- <ion-icon name="logo-facebook"></ion-icon> -->
+          </a>
+        </li>
 
-          <li>
-            <a routerLink="#" class="navbar-social-link">
-              <!-- <ion-icon name="logo-instagram"></ion-icon> -->
-            </a>
-          </li>
+        <li>
+          <a routerLink="#" class="navbar-social-link">
+            <!-- <ion-icon name="logo-instagram"></ion-icon> -->
+          </a>
+        </li>
 
-          <li>
-            <a routerLink="#" class="navbar-social-link">
-              <!-- <ion-icon name="logo-youtube"></ion-icon> -->
-            </a>
-          </li>
+        <li>
+          <a routerLink="#" class="navbar-social-link">
+            <!-- <ion-icon name="logo-youtube"></ion-icon> -->
+          </a>
+        </li>
 
-        </ul>
+      </ul>
 
-      </nav>
+    </nav>
 
-    </div>
-  </header>
+  </div>
+</header>

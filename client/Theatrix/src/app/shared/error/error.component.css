@@ -1,0 +1,21 @@
+.errorContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: var(--white);
+    font-size: 12px;
+    background-color: var(--theatrix-red);
+    animation: fadeOut 8s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      display: none;
+      /* Hide the overlay at the end of the animation */
+    }
+  }

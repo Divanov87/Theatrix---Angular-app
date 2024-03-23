@@ -1,0 +1,175 @@
+  /*-----------------------------------*\
+   * #TV SEREIS
+  \*-----------------------------------*/
+  
+  .tv-series {
+    background: url("/assets/images/bg-fixed.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: var(--section-padding);
+  }
+  
+  .tv-series .section-title {
+    margin-bottom: 50px;
+  }
+
+    /*-----------------------------------*\
+   * #MOVIE DETAIL 
+  \*-----------------------------------*/
+  
+  .movie-detail {
+    background: url("/assets/images/banner-details.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: var(--section-padding);
+    background-attachment: fixed;
+    padding-top: 100px;
+  }
+  
+  .detail-mask::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .movie-detail-banner {
+    position: relative;
+    background: var(--gunmetal-1);
+    max-width: 300px;
+    margin-inline: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+  
+  }
+  
+  .movie-detail-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .play-btn {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-size: 120px;
+    color: var(--white);
+    transition: var(--transition-1);
+  }
+  
+  .play-btn:hover {
+    background: hsla(0, 0%, 0%, 0.25);
+  }
+  
+  .detail-subtitle {
+    font-size: var(--fs-5);
+    color: var(--theatrix-red);
+    font-weight: var(--fw-700);
+    margin-bottom: 10px;
+  }
+  
+  .detail-title {
+    margin-bottom: 20px;
+  }
+  
+  .detail-title strong {
+    color: var(--theatrix-red);
+  }
+  
+  .movie-detail .meta-wrapper {
+    margin-bottom: 30px;
+  }
+  
+  .storyline {
+    color: var(--gray-x);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  
+  .details-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    max-width: 100%;
+    flex-direction: row;
+  
+    padding-bottom: 0px;
+    border-top: 1px solid var(--white);
+    /* border-radius: 4px; */
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+  
+  .details-actions .share ion-icon {
+    font-size: 30px;
+    color: var(--white);
+    margin-inline: auto;
+  }
+  
+  .details-actions .share ion-icon:hover {
+    color: var(--theatrix-red);
+  }
+  
+  
+  .details-actions .share span {
+    color: var(--white);
+    font-size: var(--fs-11);
+    transition: var(--transition-1);
+  }
+  
+  .details-actions .share:is(:hover, :focus) span {
+    color: var(--white);
+  }
+  
+  .details-actions .title {
+    color: var(--white);
+    font-weight: var(--fw-700);
+  }
+  
+  .details-actions .text {
+    font-size: var(--fs-11);
+    color: var(--gainsboro);
+  }
+  
+  .details-actions .btn-primary {
+    font-size: 10px;
+    padding: 13px 26px;
+    letter-spacing: 0;
+    background: var(--theatrix-red);
+    border: 1px solid red;
+  }
+  
+  .details-actions .btn-primary:is(:hover, :focus) {
+    background-color: transparent;
+    border: 1px solid white;
+  
+  }
+  
+  .download-btn {
+    max-width: max-content;
+    background: var(--theatrix-red);
+    color: var(--rich-black-fogra-29);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 35px;
+    letter-spacing: 5px;
+    border-radius: 6px;
+  }
+  
+  .download-btn ion-icon {
+    font-size: 16px;
+  }

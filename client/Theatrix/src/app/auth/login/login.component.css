@@ -1,0 +1,29 @@
+input[type="number"] {
+    font-size: 16px;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    height: 1.5em;
+    background-color: transparent;
+    border: none;
+  }
+  
+  input[type="number"] {
+    padding-right: 20px;
+  }
+  
+  input[type="date"] {
+    appearance: textfield;
+    /* Reset default styles in some browsers */
+    -webkit-appearance: textfield;
+    /* For Safari */
+    color: gray;
+    cursor: pointer;
+  }
+  
+  /* Reset default styles for the arrow in some browsers */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    color: transparent;
+  }

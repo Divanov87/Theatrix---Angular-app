@@ -1,0 +1,10 @@
+.sold-out {
+    font-size: 12px;
+    padding: 13px 33px;
+    letter-spacing: 0;
+    background-color: #ccc;
+    cursor: default;
+    border-radius: 50px;
+    text-transform: uppercase;
+  
+  }

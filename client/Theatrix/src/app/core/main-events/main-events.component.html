@@ -1,0 +1,111 @@
+<!-- <section class="upcoming">
+    <div class="container">
+        <div class="flex-wrapper">
+            <div class="title-wrapper">
+                <p class="section-subtitle"> {{ eventsLogged ? 'L' : 'Discover L' }}atest in your town</p>
+                <h2 class="h2 section-title">
+                    <ng-container *ngIf="events && events.length > 0">
+                        Latest
+                        <strong>
+                            {{ eventType === 'concert' ? 'Concerts' : eventType === 'theater' ? 'Performances' : eventType === 'topRated' ? 'Top Rated Events' : '' }}
+                        </strong>
+                        <span *ngIf="eventsLogged">in <b>{{ city | titlecase }}</b></span>
+                    </ng-container>
+                </h2>
+            </div>
+        </div>
+        <ul class="movies-list has-scrollbar">
+            <ng-container *ngIf="events && events.length > 0; else noEvents">
+                <ng-container *ngFor="let event of events">
+                    <app-event-card [event]="event" />
+                </ng-container>
+            </ng-container>
+            <ng-template #noEvents>
+                <h2 class="h2 section-title">There are no {{ eventsLogged ? 'upcoming' : '' }} events!</h2>
+            </ng-template>
+        </ul>
+    </div>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+      - #UPCOMING
+    -->
+
+    <!-- <section class="upcoming">
+        <div class="container">
+    
+          <div class="flex-wrapper">
+    
+            <div class="title-wrapper">
+              <p class="section-subtitle">discover latest in your town</p>
+    
+              <h2 class="h2 section-title">Latest <strong>Performances</strong>{{#if theaterEventsLogged}} in <b style="text-transform: capitalize">{{city}}</b>{{/if}}</h2>
+            </div>
+    
+            <ul class="filter-list">
+    
+              <li>
+                <button class="filter-btn">Varna</button>
+              </li>
+    
+              <li>
+                <button class="filter-btn">Bourgas</button>
+              </li>
+    
+              <li>
+                <button class="filter-btn">Plovdiv</button>
+              </li>
+    
+              <li>
+                <button class="filter-btn">Sofia</button>
+              </li>
+    
+              <li>
+                <button class="filter-btn">London</button>
+              </li>
+    
+            </ul>
+    
+          </div>
+    
+    
+    
+    
+          <ul class="movies-list  has-scrollbar">
+    
+            {{#if theaterEvents}}
+            {{#each theaterEvents}}
+            {{> eventCardDash}}
+            {{/each}}
+            {{else if theaterEventsLogged}}
+            {{#each theaterEventsLogged}}
+            {{> eventCardDash}}
+            {{/each}}
+            {{else}}
+            <h2 class="h2 section-title">There are no upcomming theather events!<h2>
+                {{/if}}
+    
+    
+          </ul>
+    
+        </div>
+      </section> -->
+    
+    
+      <!-- 
+          - #UPCOMING
+        -->

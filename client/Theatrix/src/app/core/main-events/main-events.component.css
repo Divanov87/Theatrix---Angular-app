@@ -1,0 +1,200 @@
+  /* DONE  */
+  /*-----------------------------------*\
+   * #UPCOMING
+  \*-----------------------------------*/
+
+  .upcoming {
+    /* background: url("../images/bg-fixed.jpg") no-repeat; */
+    background-size: cover;
+    background-position: center;
+    padding-block: var(--section-padding);
+  }
+
+  .upcoming .flex-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .upcoming .section-title {
+    margin-bottom: 30px;
+  }
+
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .upcoming .filter-btn {
+    color: var(--white);
+    background: var(--raisin-black);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-500);
+    border: 2px solid var(--gunmetal-1);
+    padding: 12px 26px;
+    border-radius: 50px;
+  }
+
+  .upcoming .filter-btn:hover {
+    background: url("/assets/images/masks.png") no-repeat;
+    background-size: cover;
+  }
+
+  .upcoming .filter-btn:focus {
+    background: var(--theatrix-red);
+    border: none;
+  }
+
+
+  .upcoming .movies-list>li {
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+
+  /*-----------------------------------*\
+   * #MEDIA QUERIES
+  \*-----------------------------------*/
+
+  /**
+   * responsive for large than 550px screen
+   */
+
+  @media (min-width: 550px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+
+    :root {
+
+      /**
+       * typography
+       */
+
+      --fs-1: 42px;
+
+    }
+
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+      max-width: 540px;
+      margin-inline: auto;
+    }
+
+  }
+
+  /**
+   * responsive for large than 992px screen
+   */
+
+  @media (min-width: 992px) {
+
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+      max-width: 960px;
+    }
+
+
+    /**
+     * UPCOMING
+     */
+
+    .upcoming .flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .upcoming :is(.section-subtitle, .section-title) {
+      text-align: left;
+    }
+
+    .upcoming .section-title {
+      margin-bottom: 0;
+    }
+
+    .upcoming .movies-list>li {
+      min-width: calc(33.33% - 20px);
+    }
+  }
+
+  /**
+   * responsive for large than 1200px screen
+   */
+
+  @media (min-width: 1200px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+
+    :root {
+
+      /**
+       * typography
+       */
+
+      --fs-1: 60px;
+      --fs-4: 26px;
+
+    }
+
+
+
+    /**
+     * REUSED STYLE
+     */
+
+    .container {
+      max-width: 1320px;
+      /* padding-bottom: 30px; */
+    }
+
+    /**
+     * UPCOMING
+     */
+
+    .upcoming .movies-list>li {
+      min-width: calc(25% - 22.5px);
+    }
+  }
+
+  /*-----------------------------------*\
+   * #REUSED STYLE
+  \*-----------------------------------*/
+  
+  .container {
+    padding-inline: 15px;
+  }
+  
+  /**
+   * TITLES & SUBTITLES
+   */
+
+  
+  .h2 {
+    font-size: var(--fs-2);
+  }
+
+  
+  .section-subtitle {
+    color: var(--theatrix-red);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .section-title {
+    text-align: center;
+  }

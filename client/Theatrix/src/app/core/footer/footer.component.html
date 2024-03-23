@@ -1,59 +1,45 @@
-<footer class="footer">
+<!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
 
     <!-- 
       - #CTA
     -->
 
-    <section class="cta">
-      <div class="container">
-
-        <div class="title-wrapper">
-          <h2 class="cta-title">Subscribe for our <strong>FREE</strong> bulletin</h2>
-
-          <p class="cta-text">
-            Get weekly updates about hottest performances and events, exclusive discounts, & more!
-          </p>
-        </div>
-
-        <form action="" methond="POST" class="cta-form">
-          <input type="email" id="email" name="email" required placeholder="Enter your email" class="email-field">
-
-          <button type="submit" class="cta-form-btn"><span>Get started</span></button>
-        </form>
-
-      </div>
-    </section>
+    <app-cta-form />
 
     <div class="footer-top">
       <div class="container">
 
         <div class="footer-brand-wrapper">
 
-          <a href="/" class="logo">
-            <img src="assets/images/logo2.png" alt="Theathrix logo">
+          <a routerLink="/" class="logo">
+            <img src="/assets/images/logo2.png" alt="Theathrix logo">
           </a>
 
           <ul class="footer-list">
 
 
             <li>
-              <a href="/" class="navbar-link">Home</a>
+              <a routerLink="/" class="navbar-link">Home</a>
             </li>
 
           <li>
-            <a href="/events/catalog/theater" class="navbar-link">Theater</a>
+            <a routerLink="/events/theater" class="navbar-link">Theater</a>
           </li>
 
           <li>
-            <a href="/events/catalog/concerts" class="navbar-link">Concerts</a>
+            <a routerLink="/events/concerts" class="navbar-link">Concerts</a>
           </li>
 
           <li>
-            <a href="/contacts" class="navbar-link">Contacts</a>
+            <a routerLink="/contacts" class="navbar-link">Contacts</a>
           </li>
 
             <li>
-              <a href="/about" class="footer-link">About</a>
+              <a routerLink="/about" class="navlink-link">About</a>
             </li>
 
 

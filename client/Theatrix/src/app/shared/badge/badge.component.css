@@ -1,0 +1,21 @@
+   /**
+   * BADGE
+   */
+  
+   .badge {
+    color: var(--white);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-700);
+    border: 1px solid transparent;
+    padding: 2px 10px;
+    border-radius: 12px;
+  }
+  
+  .badge-fill {
+    background: var(--white);
+    color: var(--raisin-black);
+  }
+  
+  .badge-outline {
+    border-color: var(--white);
+  }
