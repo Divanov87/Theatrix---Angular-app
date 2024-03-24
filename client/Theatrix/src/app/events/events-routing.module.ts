@@ -16,8 +16,8 @@ const routes: Routes = [
       { path: 'theater', component: TheaterComponent },
       { path: 'concerts', component: ConcertsComponent },
       { path: 'add', component: AddComponent },
-      { path: 'edit', component: EditComponent },
-      { path: 'details', component: DetailsComponent },
+      { path: ':id/edit', component: EditComponent },
+      { path: ':id/details', component: DetailsComponent },
     ]
   }
 ]

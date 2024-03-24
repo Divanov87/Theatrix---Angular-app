@@ -8,6 +8,8 @@ import { SliderComponent } from './slider/slider.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { BadgeComponent } from './badge/badge.component';
 import { EventMetaComponent } from './event-meta/event-meta.component';
+import { LoaderComponent } from './loader/loader.component';
+import { EventsRoutingModule } from '../events/events-routing.module';
 
 
 
@@ -21,11 +23,15 @@ import { EventMetaComponent } from './event-meta/event-meta.component';
     ButtonsComponent,
     BadgeComponent,
     EventMetaComponent,
+    LoaderComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EventsRoutingModule,
   ],
   exports: [
+    EventCardComponent,
+    LoaderComponent,
   ]
 })
 export class SharedModule { }

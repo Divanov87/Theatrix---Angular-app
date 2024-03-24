@@ -7,8 +7,10 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchComponent } from './search/search.component';
+
 import { HomeRoutingModule } from './home-routing.module';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     HttpClientModule,
+    SharedModule,
     HomeRoutingModule,
     RouterModule
 

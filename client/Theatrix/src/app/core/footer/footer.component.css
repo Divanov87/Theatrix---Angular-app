@@ -137,6 +137,46 @@
    * responsive for large than 768px screen
    */
   
+
+  /*-----------------------------------*\
+   * #MEDIA QUERIES
+  \*-----------------------------------*/
+  
+  /**
+   * responsive for large than 550px screen
+   */
+  
+   @media (min-width: 550px) {
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-1: 42px;
+  
+    }
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container {
+      max-width: 540px;
+      margin-inline: auto;
+    }
+  }
+
+  
+  /**
+   * responsive for large than 768px screen
+   */
+  
    @media (min-width: 768px) {
   
     /**
@@ -152,8 +192,16 @@
       --fs-2: 36px;
   
     }
-
-    
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container {
+      max-width: 720px;
+    }
+  
+   
     /**
      * FOOTER
      */
@@ -182,3 +230,62 @@
       margin-inline: 0;
     }
   }
+
+
+
+   
+  
+  /**
+   * responsive for large than 992px screen
+   */
+  
+  @media (min-width: 992px) {
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  
+  /**
+   * responsive for large than 1200px screen
+   */
+  
+   @media (min-width: 1200px) {
+  
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-1: 60px;
+      --fs-4: 26px;
+  
+    }
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container {
+      max-width: 1320px;
+      /* padding-bottom: 30px; */
+    }
+  
+  
+   }
+
+
+
+    
