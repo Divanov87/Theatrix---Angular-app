@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { IEvent } from 'src/app/interfaces/event';
 
 @Component({
   selector: 'app-event-card',
@@ -7,5 +7,5 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./event-card.component.css']
 })
 export class EventCardComponent {
-  @Input() event: any;
+  @Input() event!: IEvent;
 }

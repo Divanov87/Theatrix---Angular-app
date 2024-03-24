@@ -1,1 +1,19 @@
-<p>concerts works!</p>
+<article>
+    <section class="top-rated">
+        <div class="container">
+            <p class="section-subtitle">latest</p>
+            <h2 class="h2 section-title">Music <strong>Concerts</strong></h2>
+            <div *ngIf="isLoading" class="css-loader">
+                <app-loader />
+            </div>
+            <ul class="movies-list" *ngIf="!isLoading">
+                <ng-container *ngIf="concerts; else noConcertEvents">
+                        <app-event-card *ngFor="let concert of concerts" [event]="concert" />
+                </ng-container>
+                <ng-template #noConcertEvents>
+                    <h2 class="h2 section-title">There are no upcomming music events!</h2>
+                </ng-template>
+            </ul>
+        </div>
+    </section>
+</article>

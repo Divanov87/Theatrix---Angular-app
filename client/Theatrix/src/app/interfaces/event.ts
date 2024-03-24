@@ -19,4 +19,4 @@ export interface IEvent {
     createdAt: string;
     updatedAt: string;
     __v: number;
-}   
+}  

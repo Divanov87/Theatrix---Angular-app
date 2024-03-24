@@ -20,7 +20,7 @@ export class CatalogComponent implements OnInit {
 
       setTimeout(() => {
         this.isLoading = false;
-      }, 5000);
+      }, 1000);
     });
   }
 }

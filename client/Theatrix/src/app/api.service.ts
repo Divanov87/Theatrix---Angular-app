@@ -13,6 +13,17 @@ export class ApiService {
     const { URL } = env;
     return this.http.get<IEvent[]>(`${URL}/events`);
   }
+  getTheaterEvents() {
+    const { URL } = env;
+    return this.http.get<IEvent[]>(`${URL}/events/theater`);
+  }
+  getConcertEvents() {
+    const { URL } = env;
+    return this.http.get<IEvent[]>(`${URL}/events/concerts`);
+  }
+
+
+
 
 
 

@@ -1,32 +1,28 @@
 <article>
-
-      <section class="top-rated performances">
+    <section class="top-rated">
         <div class="container">
-          <p class="section-subtitle">Events</p>
-          <h2 class="h2 section-title">Theater & Music <strong>Performances</strong></h2> 
+            <p class="section-subtitle">Events</p>
+            <h2 class="h2 section-title">Theater & Music <strong>Performances</strong></h2>
             <!-- {{#if cityEvents}} <h2 class="h2 section-title" style='text-transform: capitalize'>{{city}}</h2>{{/if}}</h2> -->
             <div *ngIf="isLoading" class="css-loader">
                 <app-loader />
-              </div>
+            </div>
             <ul class="movies-list" *ngIf="!isLoading">
-            <ng-container *ngIf="events; else noEvents">
-            <ng-container *ngFor="let event of events">
-                <app-event-card *ngFor="let event of events" [event]="event"></app-event-card>
-           
-            <!-- {{else if cityEvents}}
+                <ng-container *ngIf="events; else noEvents">
+                    <app-event-card *ngFor="let event of events" [event]="event" />
+                    <!-- {{else if cityEvents}}
             {{#each cityEvents}}
             {{> eventCardDash}}
             {{/each}}
             {{else}} -->
-            <!-- <app-city-event-card /> -->
-        </ng-container>
-    </ng-container>
-            <ng-template #noEvents>
-            <h2 class="h2 section-title">There are no upcomming events!</h2>
-            </ng-template>
+                    <!-- <app-city-event-card /> -->
+                </ng-container>
+                <ng-template #noEvents>
+                    <h2 class="h2 section-title">There are no upcomming events!</h2>
+                </ng-template>
 
-</ul>
+            </ul>
         </div>
-      </section>
-    </article>
-  <script type="module" src="/src/assets/js/geoLocation.js"></script>
+    </section>
+</article>
+<script type="module" src="/src/assets/js/geoLocation.js"></script>
