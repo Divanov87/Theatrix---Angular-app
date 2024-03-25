@@ -164,23 +164,39 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
     height: 220px;
+    padding-bottom: 22px;
     background-color: white;
     color: #e60a15;
+    border: 2px solid red;
     border-radius: 20px;
     margin-inline: auto;
     width: 39%;
+    position : relative;
+    cursor: pointer;
   }
 
   .qr {
     background-color: red;
     color: white;
-    padding: 0px 21px;
+    text-align: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-bottom: -28px;
+    margin: -2px;
     width: 100%;
+    position : absolute;
+    bottom: 0;
+  }
+  .qr:is(:hover, :focus) span {
+    background: var(--theatrix-red);
+    color: var(--white);
+    display: none;
+  }
+
+  .qr:is(:hover, :focus):before {
+    content: "Send to mobile";
+    font-size: 18px;
   }
 
  
