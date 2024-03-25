@@ -12,6 +12,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { EventsRoutingModule } from './events-routing.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { QrCodeModule } from 'ng-qrcode';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     HttpClientModule,
     SharedModule,
+    QrCodeModule,
     EventsRoutingModule,
     RouterModule
 

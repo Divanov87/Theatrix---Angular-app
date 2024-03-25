@@ -11,7 +11,6 @@ import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { EventsModule } from './events/events.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +20,7 @@ import { EventsModule } from './events/events.module';
     HttpClientModule,
     CoreModule,
     SharedModule,
+
     AuthModule,
     HomeModule,
     EventsModule,

@@ -11,8 +11,11 @@ import { IEventDetails } from 'src/app/interfaces/event-details';
 export class DetailsComponent implements OnInit {
   eventsData: IEventDetails[] | null = [];
   isLoading: boolean = true;
+  currentURL: string;
 
-  constructor(private route: ActivatedRoute, private api: ApiService) {}
+  constructor(private route: ActivatedRoute, private api: ApiService) {
+    this.currentURL = window.location.href;
+  }
 
   ngOnInit(): void {
     const _id = this.route.snapshot.paramMap.get('id') ?? '';
