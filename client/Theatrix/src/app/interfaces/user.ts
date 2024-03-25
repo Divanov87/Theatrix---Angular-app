@@ -1,8 +1,3 @@
-// export interface IUser{
-//     username: string;
-//     password:string;
-// }
-
 export interface IUser {
     _id: string;
     username: string;
@@ -10,13 +5,13 @@ export interface IUser {
     email: string;
     city: string;
     role: string;
-    created: number;
-    liked: number;
-    bought: string;
-    pinned: string;
+    created: string[];
+    liked: string[];
+    bought: string[];
+    pinned: string[];
     registrationIp: string;
-    lastLoginIp: string;
-    registrationDate: string;
-    lastLoginDate: string[];
+    lastLoginIp: null | string;
+    registrationDate: Date;
+    lastLoginDate: Date;
     __v: number;
 }

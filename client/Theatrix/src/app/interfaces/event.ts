@@ -1,3 +1,5 @@
+import { IUser } from "./user";
+
 export interface IEvent {
     _id: string;
     name: string;
@@ -7,7 +9,7 @@ export interface IEvent {
     restriction: number;
     duration: number;
     rating: number;
-    date: string;
+    date: Date;
     time: string;
     location: string;
     category: string;
@@ -15,8 +17,8 @@ export interface IEvent {
     likesList: string[];
     buysList: string[];
     pinsList: string[];
-    owner: string;
-    createdAt: string;
-    updatedAt: string;
+    owner: IUser[];
+    createdAt: Date;
+    updatedAt: Date;
     __v: number;
 }  
