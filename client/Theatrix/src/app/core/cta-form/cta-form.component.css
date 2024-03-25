@@ -63,7 +63,8 @@
   }
 
   .cta-form-btn:is(:hover, :focus):before {
-    content: "Enjoy!"
+    /* content: "Enjoy!" */
+    display: block;
   }
 
   /*-----------------------------------*\
