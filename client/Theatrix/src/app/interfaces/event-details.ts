@@ -1,4 +1,3 @@
-import { IEvent } from "./event";
 import { IUser } from "./user";
 
 export interface IEventDetails {
@@ -22,7 +21,6 @@ export interface IEventDetails {
   createdAt: Date;
   updatedAt: Date;
   __v: number;
-  // event: IEvent[];
   isOwner: boolean;
   isLiked: boolean;
   isBuyed: boolean;

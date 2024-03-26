@@ -62,10 +62,9 @@
     /* border: 2px solid var(--eerie-black);  */
   }
 
-  .cta-form-btn:is(:hover, :focus):before {
-    /* content: "Enjoy!" */
-    display: block;
-  }
+  /* .cta-form-btn:is(:hover, :focus):before {
+    content: "Enjoy!"
+  } */
 
   /*-----------------------------------*\
    * #MEDIA QUERIES

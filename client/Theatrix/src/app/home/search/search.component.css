@@ -1,0 +1,460 @@
+  /*-----------------------------------*\
+   * #TOP RATED
+  \*-----------------------------------*/
+
+  .top-rated {
+      background: url("/assets/images/bg-fixed-overlay.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-block: var(--section-padding);
+      background-attachment: fixed;
+  }
+
+  .top-rated .section-title {
+      margin-bottom: 50px;
+  }
+
+  .h2 {
+      font-size: var(--fs-2);
+  }
+
+  .section-subtitle {
+      color: var(--theatrix-red);
+      font-size: var(--fs-11);
+      font-weight: var(--fw-500);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      text-align: center;
+      padding-top: 50px;
+  }
+
+  .section-title {
+      text-align: center;
+  }
+
+
+  /**
+   * MOVIE CARD
+   */
+
+  .movies-list {
+      display: grid;
+      gap: 50px;
+  }
+
+  .movie-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .movie-card .card-banner {
+      position: relative;
+      background: var(--gunmetal-1);
+      aspect-ratio: 2 / 3;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      transition: var(--transition-1);
+  }
+
+  .movie-card .card-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transition: var(--transition-1);
+  }
+
+  .movie-card .card-banner:hover {
+      box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.5);
+  }
+
+  .movie-card .card-banner:hover::after {
+      background: hsla(0, 0%, 100%, 0.05);
+  }
+
+  .movie-card .card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .movie-card .title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 10px;
+  }
+
+  .movie-card .card-title {
+      color: var(--white);
+      font-size: var(--fs-7);
+      transition: var(--transition-1);
+  }
+
+  .movie-card .card-title:is(:hover, :focus) {
+      color: var(--theatrix-red);
+  }
+
+  .movie-card .title-wrapper time {
+      color: var(--theatrix-gray);
+      font-size: var(--fs-9);
+      font-weight: var(--fw-500);
+  }
+
+  .movie-card .card-meta {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 15px;
+  }
+
+  .movie-card .badge {
+      color: var(--white);
+  }
+
+  .movie-card .duration {
+      margin-left: auto;
+  }
+
+  .movie-card :is(.duration, .rating) {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--gainsboro);
+      /* font-size: var(--fs-11); */
+      font-weight: var(--fw-500);
+  }
+
+  .movie-card :is(.duration, .rating) ion-icon {
+      font-size: 13px;
+      --ionicon-stroke-width: 50px;
+      color: var(--light-gray);
+  }
+
+  /**
+   * CUSTOM SLIDER & SCROLLBAR
+   */
+
+  .movies-list.has-scrollbar {
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
+      overflow-x: auto;
+      scroll-snap-type: inline mandatory;
+      padding-bottom: 25px;
+  }
+
+  .has-scrollbar::-webkit-scrollbar {
+      height: 8px;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+      box-shadow: 0 0 0 2px var(--theatrix-red);
+      border-radius: 10px;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--gainsboro);
+      border-radius: 10px;
+      box-shadow: inset 0 1px 0 var(--black),
+          inset 0 -1px 0 var(--black);
+  }
+
+  /* sssssssssssssssssssss */
+
+  /*-----------------------------------*\
+   * #MEDIA QUERIES
+  \*-----------------------------------*/
+
+  /**
+   * responsive for large than 550px screen
+   */
+
+  @media (min-width: 550px) {
+
+      /**
+     * CUSTOM PROPERTY
+     */
+
+      :root {
+
+          /**
+       * typography
+       */
+
+          --fs-1: 42px;
+
+      }
+
+
+      /**
+     * REUSED STYLE
+     */
+
+      .container {
+          max-width: 540px;
+          margin-inline: auto;
+      }
+
+      /* MOVIE CARD */
+
+      .movies-list {
+          grid-template-columns: 1fr 1fr;
+          gap: 60px 30px;
+      }
+
+  }
+
+
+
+
+
+  /**
+   * responsive for large than 768px screen
+   */
+
+  @media (min-width: 768px) {
+
+      /**
+     * CUSTOM PROPERTY
+     */
+
+      :root {
+
+          /**
+       * typography
+       */
+
+          --fs-2: 36px;
+
+      }
+
+
+      /**
+     * REUSED STYLE
+     */
+
+      .container {
+          max-width: 720px;
+      }
+
+  }
+
+
+
+
+
+  /**
+   * responsive for large than 992px screen
+   */
+
+  @media (min-width: 992px) {
+
+      /**
+     * REUSED STYLE
+     */
+
+      /* MOVIE CARD */
+
+      .movies-list {
+          grid-template-columns: repeat(3, 1fr);
+      }
+
+
+  }
+
+
+
+
+
+  /**
+   * responsive for large than 1200px screen
+   */
+
+  @media (min-width: 1200px) {
+
+      /**
+     * CUSTOM PROPERTY
+     */
+
+      :root {
+
+          /**
+       * typography
+       */
+
+          --fs-1: 60px;
+          --fs-4: 26px;
+
+      }
+
+
+
+      /**
+     * REUSED STYLE
+     */
+
+      .container {
+          max-width: 1320px;
+          /* padding-bottom: 30px; */
+      }
+
+      /* MOVIE CARD */
+
+      .movies-list {
+          grid-template-columns: repeat(4, 1fr);
+      }
+
+  }
+
+  .filter-container {
+      padding-top: 20px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 10px;
+  }
+
+
+  .filter-container select {
+      flex: 2;
+  }
+
+  .filter-container label,
+  .filter-container select {
+      flex: 30%;
+      margin-right: 0;
+      color: var(--white);
+      font-size: var(--fs-11);
+      font-weight: var(--fw-600);
+      border: 2px solid var(--gunmetal-1);
+      padding: 12px 15px;
+      border-radius: 50px;
+  }
+
+  .filter-container select {
+      background: var(--raisin-black);
+      color: white;
+  }
+
+  .filter-container option {
+      background-color: rgba(255, 255, 255, 0.947);
+  }
+
+  .vertical {
+
+      display: flex;
+      align-items: center;
+      border-left: 2px solid white;
+      padding-left: 8px;
+  }
+
+  /**
+   * BUTTONS
+   */
+
+.btn {
+    color: var(--white);
+    font-size: var(--fs-11);
+    /* font-weight: var(--fw-700); */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    border: 2px solid var(--light-gray);
+    border-radius: 50px;
+    transition: var(--transition-1);
+  }
+  
+  .btn>ion-icon {
+    font-size: 18px;
+  }
+  
+  
+  .btn-primary:is(:hover, :focus) {
+    background: var(--light-gray);
+    color: var(--xiketic);
+  }
+  
+     .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+    }
+    
+    #search-input {
+      color: var(--white);
+      font-size: var(--fs-8);
+      padding: 4px;
+      border-radius: 4px;
+      margin-right: 10px;
+      background-color: transparent;
+      outline: none;
+    }
+    
+    .search-btn {
+      position: relative;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    .search-btn ion-icon {
+      --ionicon-stroke-width: 80px;
+      /* display: none; */
+      padding-right: 8px;
+    }
+    
+    .search-btn::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: 20px;
+      background-color: transparent;
+      width: 2px;
+      height: 14px;
+    }
+    .vertical {
+    
+      display: flex;
+      align-items: center;
+      border-left: 2px solid white;
+      padding-left: 8px;
+    }
+    
+    
+    .src {
+  
+      color: var(--white);
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 30px;
+      border: 2px solid var(--light-gray);
+      border-radius: 50px;
+      transition: var(--transition-1);
+    }
+    
+    .src>ion-icon {
+      font-size: 18px;
+    }
+    
+    
+    select {
+    
+      color: var(--rich-black-fogra-29);
+    }
+    
+    
+    select option {
+      color: var(--rich-black-fogra-29);
+    }
