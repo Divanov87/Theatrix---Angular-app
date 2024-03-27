@@ -1,0 +1,75 @@
+<section class="upcoming" *ngIf="events">
+    <div class="container">
+    <div class="flex-wrapper">
+      <div class="title-wrapper">
+        <p class="section-subtitle">latest</p>
+        <h2 class="h2 section-title">Top Rated <strong>Events</strong></h2>
+      </div>
+      <ul class="filter-list">
+
+        <li>
+          <button class="filter-btn">Varna</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Bourgas</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Plovdiv</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Sofia</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">London</button>
+        </li>
+
+      </ul>
+    </div>
+    <ul class="movies-list has-scrollbar">
+      <ng-container *ngIf="events['topRatedEvents'] && events['topRatedEvents'].length; else noTopRatedEvents">
+        <ng-container *ngFor="let event of events['topRatedEvents']">
+            <li>
+                <div class="movie-card">
+                    <a routerLink="/events/{{event._id}}/details">
+                        <figure class="card-banner">
+                            <img src="{{event.imageUrl}}" alt="">
+                        </figure>
+                    </a>
+                    <div class="title-wrapper">
+                        <a routerLink="/events/{{event._id}}/details">
+                            <h3 class="card-title">{{event.name}}</h3>
+                        </a>
+                        <div class="location-badge">
+                            <!-- <ion-icon name="location"></ion-icon>&nbsp; --> {{event.location}}
+                        </div>
+                    </div>
+                    <div class="badge badge-outline">
+                        <div class="date-time">
+                            <div>
+                                <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+                                <time datetime="">{{event.date}}</time>
+                            </div>
+                            <div class="duration">
+                                <!-- <ion-icon name="time-outline"></ion-icon> -->
+                                <time datetime="">{{event.duration}} min</time>
+                            </div>
+                            <div class="rating">
+                                <!-- <ion-icon name="star"></ion-icon> -->
+                                <data>{{event.rating}}</data>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ng-container>
+      </ng-container>
+      <ng-template #noTopRatedEvents>
+        <h2 class="h2 section-title">There are no Top Rated events!</h2>
+      </ng-template>
+    </ul>
+  </div>
+</section>
