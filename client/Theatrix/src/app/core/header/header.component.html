@@ -2,7 +2,7 @@
 
   <div class="container">
 
-    <div class="overlay" data-overlay></div>
+    <div class="overlay" data-overlay [class.active]="isNavbarActive" (click)="toggleNavbar()"></div>
 
     <a routerLink="" class="logo">
       <img src="/assets/images/logo.png" alt="Theatrix logo">
@@ -28,11 +28,11 @@
       <!-- {{/unless}} -->
     </div>
 
-    <button class="menu-open-btn" data-menu-open-btn>
-      <!-- <ion-icon name="reorder-three"></ion-icon> -->
+    <button class="menu-open-btn" (click)="toggleNavbar()" data-menu-open-btn>
+      <!-- <ion-icon name="reorder-three"></ion-icon> --><i class="bx bx-menu"></i>
     </button>
 
-    <nav class="navbar" data-navbar>
+    <nav class="navbar" data-navbar [class.active]="isNavbarActive">
 
       <div class="navbar-top">
 
@@ -40,8 +40,8 @@
           <img src="assets/images/logo.png" alt="Theatrix logo">
         </a>
 
-        <button class="menu-close-btn" data-menu-close-btn>
-          <!-- <ion-icon name="close-outline"></ion-icon> -->
+        <button class="menu-close-btn" (click)="toggleNavbar()" data-menu-close-btn>
+          <!-- <ion-icon name="close-outline"></ion-icon> -->x
         </button>
 
       </div>
