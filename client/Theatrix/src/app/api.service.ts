@@ -33,6 +33,18 @@ export class ApiService {
     const { URL } = env;
     return this.http.get<{ [key: number]: IEvent[] }>(`${URL}/`);
   }
+  createEvent(_id: string, eventsData: IEvent) {
+    const { URL } = env;
+    return this.http.post<IEvent>(`${URL}/events/add`, eventsData); 
+  }
+  editEvent(_id: string, eventsData:IEvent) {
+    const { URL } = env;
+    return this.http.put<IEvent>(`${URL}/events/${_id}`, eventsData); 
+  }
+  deleteEvent(_id: string) {
+    const { URL } = env;
+    return this.http.delete<IEvent>(`${URL}/events/${_id}`); 
+  }
   // getTheatrixEvents(): Observable<{ [key: number]: IEvent[] }> {
   //   const { URL } = env;
   //   return this.http.get<{ [key: number]: IEvent[] }>(`${URL}/`);

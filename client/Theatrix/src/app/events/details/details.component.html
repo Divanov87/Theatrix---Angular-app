@@ -82,10 +82,10 @@
                     {{#if isPinned}} -->
                         <button class="share">
                             <i class='bx bxs-pin'></i>
-                            <a href="/events/{{event._id}}/unpin">Pinned</a>
+                            <a routerLink="/events/{{event._id}}/unpin">Pinned</a>
                         </button>
                         <!-- {{else}} -->
-                        <a href="/events/{{event._id}}/pin">
+                        <a routerLink="/events/{{event._id}}/pin">
                             <button class="share">
                                 <i class='bx bx-pin'></i>
                                 Pin
@@ -93,10 +93,10 @@
                         </a>
                         <!-- {{/if}} -->
                         <button class="btn btn-primary">
-                            <a href="/events/{{event._id}}/edit">Edit</a>
+                            <a routerLink="/events/{{event._id}}/edit">Edit</a>
                         </button>
                         <button class="btn btn-primary">
-                            <a href="/events/{{event._id}}/delete">Delete</a>
+                            <a routerLink="/events/{{event._id}}/delete">Delete</a>
                         </button>
                         <!-- {{else}}
                     {{#if isLiked}} -->
@@ -105,7 +105,7 @@
                             <span>{{event.likesList.length}}</span>
                         </button>
                         <!-- {{else}} -->
-                        <a href="/events/{{event._id}}/like">
+                        <a routerLink="/events/{{event._id}}/like">
                             <button class="share">
                                 <i class='bx bx-heart'></i>
                                 Like
@@ -121,7 +121,7 @@
                         </a>
                         <!-- {{#if ticketsLeft}} -->
                         <button class="btn btn-primary">
-                            <a href="/events/{{event._id}}/buy">Buy Tickets</a>
+                            <a routerLink="/events/{{event._id}}/buy">Buy Tickets</a>
                         </button>
                         <!-- {{else}} -->
                         <button class="sold-out">
