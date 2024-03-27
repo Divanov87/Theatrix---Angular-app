@@ -1,213 +1,212 @@
-
-  /*-----------------------------------*\
+/*-----------------------------------*\
    * #HERO
   \*-----------------------------------*/
-  
-  .hero {
-    background: url("/assets/images/bg-fixed.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 750px;
-    height: 100vh;
-    max-height: 1000px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-block: var(--section-padding);
-  }
-  
-  .hero-content {
-    margin-top: 60px;
-  }
-  
-  .hero-subtitle {
-    color: var(--theatrix-red);
-    font-size: var(--fs-4);
-    font-weight: var(--fw-700);
-    margin-bottom: 10px;
-  }
-  
-  .hero-title {
-    margin-bottom: 30px;
-  }
-  
-  .hero-title>strong {
-    color: var(--theatrix-red);
-  }
 
-  
-  /*-----------------------------------*\
+.hero {
+  background: url("/assets/images/bg-fixed.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 750px;
+  height: 100vh;
+  max-height: 1000px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: var(--section-padding);
+}
+
+.hero-content {
+  margin-top: 60px;
+}
+
+.hero-subtitle {
+  color: var(--theatrix-red);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-700);
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+}
+
+.hero-title>strong {
+  color: var(--theatrix-red);
+}
+
+
+/*-----------------------------------*\
    * #MEDIA QUERIES
   \*-----------------------------------*/
-  
-  /**
+
+/**
    * responsive for large than 550px screen
    */
-  
-   @media (min-width: 550px) {
-  
-    /**
+
+@media (min-width: 550px) {
+
+  /**
      * CUSTOM PROPERTY
      */
-  
-    :root {
-  
-      /**
+
+  :root {
+
+    /**
        * typography
        */
-  
-      --fs-1: 42px;
-  
-    }
-  
-  
-  
-    /**
-     * REUSED STYLE
-     */
-  
-    .container {
-      max-width: 540px;
-      margin-inline: auto;
-    }
-    
-    /**
-     * HERO
-     */
-  
-     .hero {
-      min-height: unset;
-  
-    }
-  
-    .hero-content {
-      margin-top: 20px;
-    }
+
+    --fs-1: 42px;
+
   }
 
-  
+
+
   /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+  /**
+     * HERO
+     */
+
+  .hero {
+    min-height: unset;
+
+  }
+
+  .hero-content {
+    margin-top: 20px;
+  }
+}
+
+
+/**
    * responsive for large than 768px screen
    */
-  
-   @media (min-width: 768px) {
-  
-    /**
+
+@media (min-width: 768px) {
+
+  /**
      * CUSTOM PROPERTY
      */
-  
-    :root {
-  
-      /**
+
+  :root {
+
+    /**
        * typography
        */
-  
-      --fs-2: 36px;
-  
-    }
-  
-  
-  
-    /**
+
+    --fs-2: 36px;
+
+  }
+
+
+
+  /**
      * REUSED STYLE
      */
-  
-    .container {
-      max-width: 720px;
-    }
-  
-    
-  
-    /**
+
+  .container {
+    max-width: 720px;
+  }
+
+
+
+  /**
      * HERO
      */
-  
-     .hero-content {
-      margin-top: 90px;
-    }
-   }
 
-   
-  
-  /**
+  .hero-content {
+    margin-top: 90px;
+  }
+}
+
+
+
+/**
    * responsive for large than 992px screen
    */
-  
-  @media (min-width: 992px) {
-  
-    /**
+
+@media (min-width: 992px) {
+
+  /**
      * REUSED STYLE
      */
-  
-    .container {
-      max-width: 960px;
-    }
-  
-    /**
+
+  .container {
+    max-width: 960px;
+  }
+
+  /**
      * HERO
      */
-  
-     .hero {
-      background-position: right;
-    }
-  
-    .hero .container {
-      width: 950px;
-    }
-  
-    .hero-content {
-      margin-top: 100px;
-      max-width: 600px;
-    }
+
+  .hero {
+    background-position: right;
   }
-  
-  
-  /**
+
+  .hero .container {
+    width: 950px;
+  }
+
+  .hero-content {
+    margin-top: 100px;
+    max-width: 600px;
+  }
+}
+
+
+/**
    * responsive for large than 1200px screen
    */
-  
-   @media (min-width: 1200px) {
-  
-    /**
+
+@media (min-width: 1200px) {
+
+  /**
      * CUSTOM PROPERTY
      */
-  
-    :root {
-  
-      /**
+
+  :root {
+
+    /**
        * typography
        */
-  
-      --fs-1: 60px;
-      --fs-4: 26px;
-  
-    }
-  
-  
-  
-    /**
+
+    --fs-1: 60px;
+    --fs-4: 26px;
+
+  }
+
+
+
+  /**
      * REUSED STYLE
      */
-  
-    .container {
-      max-width: 1320px;
-      /* padding-bottom: 30px; */
-    }
-    
-  
-    /**
+
+  .container {
+    max-width: 1320px;
+    /* padding-bottom: 30px; */
+  }
+
+
+  /**
      * HERO
      */
-  
-     .hero .container {
-      width: 1320px;
-    }
-  
-   }
+
+  .hero .container {
+    width: 1320px;
+  }
+
+}
 
 
 
-   /* button in header */
+/* button in header */
 
 /**
    * BUTTONS
@@ -238,138 +237,145 @@
   color: var(--xiketic);
 }
 
-   .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-  }
-  
-  #search-input {
-    color: var(--white);
-    font-size: var(--fs-8);
-    padding: 4px;
-    border-radius: 4px;
-    margin-right: 10px;
-    background-color: transparent;
-    outline: none;
-  }
-  
-  .search-btn {
-    position: relative;
-    color: var(--white);
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
-  .search-btn ion-icon {
-    --ionicon-stroke-width: 80px;
-    /* display: none; */
-    padding-right: 8px;
-  }
-  
-  .search-btn::after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    right: 20px;
-    background-color: transparent;
-    width: 2px;
-    height: 14px;
-  }
-  .vertical {
-  
-    display: flex;
-    align-items: center;
-    border-left: 2px solid white;
-    padding-left: 8px;
-  }
-  
-  
-  .src {
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
 
-    color: var(--white);
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 30px;
-    border: 2px solid var(--light-gray);
-    border-radius: 50px;
-    transition: var(--transition-1);
-  }
-  
-  .src>ion-icon {
-    font-size: 18px;
-  }
-  
-  
-  select {
-  
-    color: var(--rich-black-fogra-29);
-  }
-  
-  
-  select option {
-    color: var(--rich-black-fogra-29);
-  }
-  
-  /* select option:checked {
+#search-input {
+  color: var(--white);
+  font-size: var(--fs-8);
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+.search-btn {
+  position: relative;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search-btn ion-icon {
+  --ionicon-stroke-width: 80px;
+  /* display: none; */
+  padding-right: 8px;
+}
+
+.search-btn::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  background-color: transparent;
+  width: 2px;
+  height: 14px;
+}
+
+.vertical {
+
+  display: flex;
+  align-items: center;
+  border-left: 2px solid white;
+  padding-left: 8px;
+}
+
+
+.src {
+
+  color: var(--white);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border: 2px solid var(--light-gray);
+  border-radius: 50px;
+  transition: var(--transition-1);
+}
+
+.src>ion-icon {
+  font-size: 18px;
+}
+
+
+select {
+
+  color: var(--rich-black-fogra-29);
+}
+
+
+select option {
+  color: var(--rich-black-fogra-29);
+}
+
+/* select option:checked {
   
   } */
-  
+
 
 /* movie meta here or in styles.css decide where now is in both same as containers */
 
-  /**
+/**
    * MOVIE META
    */
-  
-   .meta-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px 25px;
-    margin-bottom: 50px;
-  }
-  
-  .badge-wrapper,
-  .ganre-wrapper,
-  .date-time {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 5px 10px;
-    color: var(--white);
-  }
-  
-  .ganre-wrapper>a {
-    color: var(--gainsboro);
-    font-size: var(--fs-9);
-    font-weight: var(--fw-500);
-    transition: var(--transition-1);
-  }
-  
-  .ganre-wrapper>a:is(:hover, :focus) {
-    color: var(--theatrix-red);
-  }
-  
-  .date-time {
-    gap: 15px;
-  }
-  
-  .date-time>div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--gainsboro);
-    font-size: var(--fs-9);
-    font-weight: var(--fw-500);
-  }
-  
-  .date-time ion-icon {
-    --ionicon-stroke-width: 50px;
-    color: var(--light-gray);
-  }
 
-  /* end  */
+.meta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px 25px;
+  margin-bottom: 50px;
+}
+
+.badge-wrapper,
+.ganre-wrapper,
+.date-time {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 10px;
+  color: var(--white);
+}
+
+.ganre-wrapper>a {
+  color: var(--gainsboro);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  transition: var(--transition-1);
+}
+
+.ganre-wrapper>a:is(:hover, :focus) {
+  color: var(--theatrix-red);
+}
+
+.date-time {
+  gap: 15px;
+}
+
+.date-time>div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--gainsboro);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+}
+
+.date-time ion-icon {
+  --ionicon-stroke-width: 50px;
+  color: var(--light-gray);
+}
+.bx, .bxs {
+  font-size: 14px;
+ 
+}
+.bx-search {
+  font-size: 22px;
+
+}

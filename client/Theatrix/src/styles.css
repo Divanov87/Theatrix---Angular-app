@@ -415,3 +415,15 @@ figure {
   justify-content: center;
   align-items: center;
 }
+.bx, .bxs {
+  font-size: 14px;
+ 
+}
+.bxs-map {
+  font-size: 19px;
+
+}
+.bxs-coupon, .bx-body, .bx-donate-heart {
+  font-size: 50px;
+
+}
