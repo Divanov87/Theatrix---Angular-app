@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { env } from 'src/environments/environment.development';
 import { IEvent } from './interfaces/event';
 import { IEventDetails } from './interfaces/event-details';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+// import { Observable } from 'rxjs';
+// import { tap } from 'rxjs/operators';
 
 
 @Injectable({
