@@ -5,15 +5,68 @@
     <div class="container">
         <p class="section-subtitle">latest</p>
         <h2 class="h2 section-title">Pinned <strong>Events</strong></h2>
-        <!-- {{#if latestPins}} -->
-        <ul class="movies-list">
-            <!--   
-            {{#each latestPins}}
-            {{> eventCardDash}}
-            {{/each}}
-            {{else}} -->
+        <ul class="movies-list" *ngIf="events">
+  
+                <ng-container *ngFor="let event of events['latestPins']">
+                    <li>
+                        <div class="movie-card">
+                            <a routerLink="/events/{{event._id}}/details">
+                                <figure class="card-banner">
+                                    <img src="{{event.imageUrl}}" alt="">
+                                </figure>
+                            </a>
+                            <div class="title-wrapper">
+                                <a routerLink="/events/{{event._id}}/details">
+                                    <h3 class="card-title">{{event.name}}</h3>
+                                </a>
+                                <div class="location-badge">
+                                    <!-- <ion-icon name="location"></ion-icon>&nbsp; --> {{event.location}}
+                                </div>
+                            </div>
+                            <div class="badge badge-outline">
+                                <div class="date-time">
+                                    <div>
+                                        <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+                                        <time datetime="">{{event.date}}</time>
+                                    </div>
+                                    <div class="duration">
+                                        <!-- <ion-icon name="time-outline"></ion-icon> -->
+                                        <time datetime="">{{event.duration}} min</time>
+                                    </div>
+                                    <div class="rating">
+                                        <!-- <ion-icon name="star"></ion-icon> -->
+                                        <data>{{event.rating}}</data>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ng-container>
+    
+            <ng-template #noEvents>
+                <h2 class="h2 section-title">There are no latest pins!</h2>
+            </ng-template>
         </ul>
-        <h2 class="h2 section-title">There are no upcomming music events!</h2>
-        <!-- {{/if}} -->
     </div>
 </section>
+
+
+<!-- 
+# NOT WORKING CORRECTLY, DISPLAY FLEX NOT WORKING WHILE USING SEPARETE EVENT CARD COMPONENT !!!!!
+-->
+<!-- <section class="top-rated">
+    <div class="container">
+        <p class="section-subtitle">latest</p>
+        <h2 class="h2 section-title">Pinned <strong>Events</strong></h2>
+        <ul class="movies-list" *ngIf="events">
+            <ng-container *ngIf="events['latestPins'] && events['latestPins'].length; else noEvents">
+                <ng-container *ngFor="let pinned of events['latestPins']">
+                    <app-event-card [event]="pinned"></app-event-card>
+                </ng-container>
+            </ng-container>
+            <ng-template #noEvents>
+                <h2 class="h2 section-title">There are no latest pins!</h2>
+            </ng-template>
+        </ul>
+    </div>
+</section> -->

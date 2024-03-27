@@ -3,12 +3,15 @@ import { Injectable } from '@angular/core';
 import { env } from 'src/environments/environment.development';
 import { IEvent } from './interfaces/event';
 import { IEventDetails } from './interfaces/event-details';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAllEvents() {
     const { URL } = env;
@@ -26,19 +29,18 @@ export class ApiService {
     const { URL } = env;
     return this.http.get<IEventDetails[]>(`${URL}/events/${_id}/details`);
   }
-
-  // addEventg(_id: string) {
+   getTheatrixEvents() {
+    const { URL } = env;
+    return this.http.get<{ [key: number]: IEvent[] }>(`${URL}/`);
+  }
+  // getTheatrixEvents(): Observable<{ [key: number]: IEvent[] }> {
   //   const { URL } = env;
-  //   return this.http.get<IEvent[]>(`${URL}/events/${_id}`);
-  // }
-  // addEventp(addedEvent: Event, _id: string) {
-  //   const { URL } = env;
-  //   return this.http.post<IEvent[]>(`${URL}/events/${_id}`, addedEvent);
+  //   return this.http.get<{ [key: number]: IEvent[] }>(`${URL}/`);
+  //   .pipe(tap(response => console.log('API Response:', response)));
   // }
 
 
 
 
 
- 
 }
