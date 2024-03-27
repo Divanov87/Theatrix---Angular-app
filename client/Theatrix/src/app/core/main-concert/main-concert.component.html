@@ -33,8 +33,7 @@
       <app-loader />
     </div>
     <ul class="movies-list has-scrollbar">
-      <ng-container
-        *ngIf="!isLoading && events['concertEvents'] && events['concertEvents'].length; else noConcertEvents">
+      <ng-container *ngIf="!isLoading && events['concertEvents'].length; else noConcertEvents">
         <ng-container *ngFor="let event of events['concertEvents']">
           <li>
             <div class="movie-card">

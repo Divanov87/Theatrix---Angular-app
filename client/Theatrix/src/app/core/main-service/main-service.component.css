@@ -305,3 +305,7 @@
         max-width: 480px;
     }
 }
+
+.bxs-coupon{
+    transform: rotate(-45deg);
+}

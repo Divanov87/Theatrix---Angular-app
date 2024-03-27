@@ -21,7 +21,7 @@ export class MainConcertComponent implements OnInit {
         this.events = event;
         setTimeout(() => {
           this.isLoading = false;
-        }, 10000);
+        }, 5000);
         console.log(event);
       },
       error: (error) => {

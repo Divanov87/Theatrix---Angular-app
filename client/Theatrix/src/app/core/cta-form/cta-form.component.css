@@ -55,10 +55,10 @@
     transition: var(--transition-1);
   }
 
-  .cta-form-btn:is(:hover, :focus) span {
-    background: var(--theatrix-red);
+  .cta-form-btn:is(:hover, :focus) {
+    background: red;
     color: var(--white);
-    display: none;
+    border: 2px solid red;
     /* border: 2px solid var(--eerie-black);  */
   }
 

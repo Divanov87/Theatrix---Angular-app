@@ -21,7 +21,7 @@ export class MainRatedComponent implements OnInit {
         this.events = event;
         setTimeout(() => {
           this.isLoading = false;
-        }, 10000);
+        }, 1000);
         console.log(event);
       },
       error: (error) => {
