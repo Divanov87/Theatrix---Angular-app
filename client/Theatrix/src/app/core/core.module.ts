@@ -10,6 +10,9 @@ import { CtaFormComponent } from './cta-form/cta-form.component';
 import { MainTopComponent } from './main-top/main-top.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainComponent } from './main/main.component';
+import { MainRatedComponent } from './main-rated/main-rated.component';
+import { MainTheaterComponent } from './main-theater/main-theater.component';
+import { MainConcertComponent } from './main-concert/main-concert.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { MainComponent } from './main/main.component';
     MainEventsComponent,
     CtaFormComponent,
     MainTopComponent,
-    MainComponent
+    MainComponent,
+    MainRatedComponent,
+    MainTheaterComponent,
+    MainConcertComponent
 
   ],
   imports: [

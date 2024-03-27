@@ -10,7 +10,6 @@ import { IEvent } from '../../interfaces/event';
 export class MainPinnedComponent implements OnInit {
   @Input() events: { [key: string]: IEvent[] } | null = null;
   @Input() eventType: string = '';
-  // events: { [key: number]: IEvent[] } | null = null;
   isLoading: boolean = true;
 
   constructor(private api: ApiService) {}
