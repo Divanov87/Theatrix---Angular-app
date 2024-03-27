@@ -56,36 +56,38 @@
    * #MEDIA QUERIES
   \*-----------------------------------*/
 
-  /**
-   * responsive for large than 550px screen
-   */
-
-  @media (min-width: 550px) {
-
     /**
      * CUSTOM PROPERTY
      */
-
-    :root {
-
+  
+     :root {
+  
       /**
        * typography
        */
-
+  
       --fs-1: 42px;
-
+  
     }
-
+  
     /**
      * REUSED STYLE
      */
-
+  
     .container {
       max-width: 540px;
       margin-inline: auto;
     }
-
-  }
+  
+    /**
+     * UPCOMING
+     */
+  
+    .movies-list>li {
+      /* min-width: calc(33.33% - 20px);  DO NOT DELETE  ==> fix for 1 max-width: calc(20% - 15px); */
+      min-width: calc(33.33% - 20px);
+      max-width: calc(20% - 15px);
+    }
 
   /**
    * responsive for large than 992px screen

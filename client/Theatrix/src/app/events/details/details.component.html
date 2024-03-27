@@ -5,7 +5,7 @@
         -->
 
     <section class="movie-detail">
-        <!-- <section class="movie-detail detail-mask" style='background: url("./assets/images/4.jpg") center top/cover; background-attachment: fixed;'> -->
+        <!-- <section class="movie-detail detail-mask" style='background: url("/assets/images/4.jpg") center top/cover; background-attachment: fixed;'> -->
 
         <p class="section-subtitle" *ngIf="!isLoading">Events</p>
 
@@ -37,22 +37,22 @@
                         <div class="date-time">
 
                             <div>
-                                <!-- <ion-icon name="location-sharp"></ion-icon> -->
+                                <i class="bx bxs-map"></i><!-- <ion-icon name="location-sharp"></ion-icon> -->
                                 <time datetime="">{{event.location}}</time>
                             </div>
                             |
                             <div>
-                                <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+                                <i class="bx bx-calendar"></i><!-- <ion-icon name="calendar-outline"></ion-icon> -->
                                 <time datetime="">{{event.date}}</time>
                             </div>
                             |
                             <div>
-                                <!-- <ion-icon name="time-outline"></ion-icon> -->
+                                <i class='bx bx-time'></i><!-- <ion-icon name="time-outline"></ion-icon> -->
                                 <time datetime="">{{event.time}} PM</time>
                             </div>
                             |
                             <div>
-                                <!-- <ion-icon name="timer-outline"></ion-icon> -->
+                                <i class='bx bx-timer'></i><!-- <ion-icon name="timer-outline"></ion-icon> -->
                                 <time datetime="">{{event.duration}} min</time>
                             </div>
                             |
@@ -75,19 +75,19 @@
                     <!-- {{#if user}} -->
                     <div class="details-actions">
                         <button class="share" id="shareButton">
-                            <!-- <ion-icon name="share-social-outline"></ion-icon> -->
+                            <i class='bx bx-share-alt'></i>
                             <span>Share</span>
                         </button>
                         <!-- {{#if isAdmin}}
                     {{#if isPinned}} -->
                         <button class="share">
-                            <!-- <ion-icon name="star" style="color:rgb(212, 151, 20);"></ion-icon> -->
+                            <i class='bx bxs-pin'></i>
                             <a href="/events/{{event._id}}/unpin">Pinned</a>
                         </button>
                         <!-- {{else}} -->
                         <a href="/events/{{event._id}}/pin">
                             <button class="share">
-                                <!-- <ion-icon name="star-outline"></ion-icon> -->
+                                <i class='bx bx-pin'></i>
                                 Pin
                             </button>
                         </a>
@@ -101,13 +101,13 @@
                         <!-- {{else}}
                     {{#if isLiked}} -->
                         <button class="share">
-                            <!-- <ion-icon name="heart" style="color:red;"></ion-icon> -->
+                            <i class='bx bxs-heart'></i>
                             <span>{{event.likesList.length}}</span>
                         </button>
                         <!-- {{else}} -->
                         <a href="/events/{{event._id}}/like">
                             <button class="share">
-                                <!-- <ion-icon name="heart-outline"></ion-icon> -->
+                                <i class='bx bx-heart'></i>
                                 Like
                             </button>
                         </a>
@@ -115,7 +115,7 @@
 
                         <a href="javascript:void(0)">
                             <button class="share">
-                                <!-- <ion-icon name="ticket-outline"></ion-icon> -->
+                                <i class='bx bxs-coupon'></i>
                                 {{event.ticketsLeft}}
                             </button>
                         </a>

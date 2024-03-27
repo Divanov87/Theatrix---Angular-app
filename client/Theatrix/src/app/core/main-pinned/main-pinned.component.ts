@@ -18,7 +18,9 @@ export class MainPinnedComponent implements OnInit {
     this.api.getTheatrixEvents().subscribe({
       next: (event) => {
         this.events = event;
-        this.isLoading = false;
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 10000);
         console.log(event);
       },
       error: (error) => {

@@ -1,12 +1,15 @@
 <!-- 
 # PINNED EVENTS
 -->
-<section class="top-rated">
+<section class="top-rated" *ngIf="events">
     <div class="container">
         <p class="section-subtitle">latest</p>
         <h2 class="h2 section-title">Pinned <strong>Events</strong></h2>
-        <ul class="movies-list" *ngIf="events">
-  
+        <div *ngIf="isLoading" class="css-loader">
+            <app-loader />
+        </div>
+        <ul class="movies-list" >
+            <ng-container *ngIf="!isLoading && events['latestPins'].length; else noEvents">
                 <ng-container *ngFor="let event of events['latestPins']">
                     <li>
                         <div class="movie-card">
@@ -42,9 +45,9 @@
                         </div>
                     </li>
                 </ng-container>
-    
+            </ng-container>
             <ng-template #noEvents>
-                <h2 class="h2 section-title">There are no latest pins!</h2>
+                <h2 class="h2 section-title">There are no pinned events!</h2>
             </ng-template>
         </ul>
     </div>

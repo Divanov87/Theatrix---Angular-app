@@ -439,3 +439,20 @@
     text-transform: uppercase;
 
   }
+  .bx-pin, .bxs-pin {
+    transform: rotate(45deg);
+  }
+  .bxs-coupon {
+    transform: rotate(-45deg);
+  }
+  
+  .bx-timer {
+    font-size: 20px;
+  }
+  .bx-pin, .bxs-pin, .bx-heart, .bxs-heart, .bxs-coupon, .bx-share-alt {
+    font-size: 30px;
+  }
+
+.bxs-heart{
+color: red;
+  }

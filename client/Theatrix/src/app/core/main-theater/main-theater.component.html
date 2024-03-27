@@ -1,70 +1,74 @@
 <section class="upcoming" *ngIf="events">
-    <div class="container">
+  <div class="container">
     <div class="flex-wrapper">
-        <div class="title-wrapper">
-            <p class="section-subtitle">discover latest in your town</p>
-            <h2 class="h2 section-title">Latest <strong>Performances</strong></h2>
-          </div>
-          <ul class="filter-list">
-    
-            <li>
-              <button class="filter-btn">Varna</button>
-            </li>
-    
-            <li>
-              <button class="filter-btn">Bourgas</button>
-            </li>
-    
-            <li>
-              <button class="filter-btn">Plovdiv</button>
-            </li>
-    
-            <li>
-              <button class="filter-btn">Sofia</button>
-            </li>
-    
-            <li>
-              <button class="filter-btn">London</button>
-            </li>
-    
-          </ul>
-        </div>
+      <div class="title-wrapper">
+        <p class="section-subtitle">discover latest in your town</p>
+        <h2 class="h2 section-title">Latest <strong>Performances</strong></h2>
+      </div>
+      <ul class="filter-list">
+
+        <li>
+          <button class="filter-btn">Varna</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Bourgas</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Plovdiv</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">Sofia</button>
+        </li>
+
+        <li>
+          <button class="filter-btn">London</button>
+        </li>
+
+      </ul>
+    </div>
+    <div *ngIf="isLoading" class="css-loader">
+      <app-loader />
+    </div>
     <ul class="movies-list has-scrollbar">
-      <ng-container *ngIf="events['theaterEvents'] && events['theaterEvents'].length; else noTheaterEvents">
+      <ng-container
+        *ngIf="!isLoading && events['theaterEvents'] && events['theaterEvents'].length; else noTheaterEvents">
         <ng-container *ngFor="let event of events['theaterEvents']">
-            <li>
-                <div class="movie-card">
-                    <a routerLink="/events/{{event._id}}/details">
-                        <figure class="card-banner">
-                            <img src="{{event.imageUrl}}" alt="">
-                        </figure>
-                    </a>
-                    <div class="title-wrapper">
-                        <a routerLink="/events/{{event._id}}/details">
-                            <h3 class="card-title">{{event.name}}</h3>
-                        </a>
-                        <div class="location-badge">
-                          <!-- <ion-icon name="location"></ion-icon>&nbsp; --><i class="bx bxs-map"></i>&nbsp;{{event.location}}
-                                </div>
-                            </div>
-                            <div class="badge badge-outline">
-                                <div class="date-time">
-                                    <div>
-                                        <!-- <ion-icon name="calendar-outline"></ion-icon> -->
-                                        <i class="bx bx-calendar"></i><time datetime="">{{event.date}}</time>
-                                    </div>
-                                    <div class="duration">
-                                        <!-- <ion-icon name="time-outline"></ion-icon> -->
-                                        <i class='bx bx-time' ></i><time datetime="">{{event.duration}} min</time>
-                                    </div>
-                                    <div class="rating">
-                                        <!-- <ion-icon name="star"></ion-icon> -->
-                                        <i class='bx bxs-star'></i><data>{{event.rating}}</data>
-                                    </div>
-                                </div>
-                            </div>
+          <li>
+            <div class="movie-card">
+              <a routerLink="/events/{{event._id}}/details">
+                <figure class="card-banner">
+                  <img src="{{event.imageUrl}}" alt="">
+                </figure>
+              </a>
+              <div class="title-wrapper">
+                <a routerLink="/events/{{event._id}}/details">
+                  <h3 class="card-title">{{event.name}}</h3>
+                </a>
+                <div class="location-badge">
+                  <!-- <ion-icon name="location"></ion-icon>&nbsp; --><i class="bx bxs-map"></i>&nbsp;{{event.location}}
                 </div>
-            </li>
+              </div>
+              <div class="badge badge-outline">
+                <div class="date-time">
+                  <div>
+                    <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+                    <i class="bx bx-calendar"></i><time datetime="">{{event.date}}</time>
+                  </div>
+                  <div class="duration">
+                    <!-- <ion-icon name="time-outline"></ion-icon> -->
+                    <i class='bx bx-time'></i><time datetime="">{{event.duration}} min</time>
+                  </div>
+                  <div class="rating">
+                    <!-- <ion-icon name="star"></ion-icon> -->
+                    <i class='bx bxs-star'></i><data>{{event.rating}}</data>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
           <!-- <app-event-card [event]="event"></app-event-card> -->
         </ng-container>
       </ng-container>

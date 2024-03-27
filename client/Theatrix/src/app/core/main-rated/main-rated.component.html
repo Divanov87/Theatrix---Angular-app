@@ -29,8 +29,11 @@
 
       </ul>
     </div>
+    <div *ngIf="isLoading" class="css-loader">
+      <app-loader />
+  </div>
     <ul class="movies-list has-scrollbar">
-      <ng-container *ngIf="events['topRatedEvents'] && events['topRatedEvents'].length; else noTopRatedEvents">
+      <ng-container *ngIf="!isLoading && events['topRatedEvents'].length; else noTopRatedEvents">
         <ng-container *ngFor="let event of events['topRatedEvents']">
             <li>
                 <div class="movie-card">
