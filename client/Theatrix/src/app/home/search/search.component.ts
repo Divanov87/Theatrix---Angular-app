@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { IEvent } from '../../interfaces/event';
 
@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
   events: IEvent[] | null = [];
   isLoading: boolean = true;
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.api.getAllEvents().subscribe((events) => {
@@ -22,6 +22,11 @@ export class SearchComponent implements OnInit {
         this.isLoading = false;
       }, 1000);
     });
+
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      this.renderer.selectRootElement(searchInput).focus();
+    }
   }
 }
 
