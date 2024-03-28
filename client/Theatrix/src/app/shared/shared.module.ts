@@ -10,6 +10,7 @@ import { BadgeComponent } from './badge/badge.component';
 import { EventMetaComponent } from './event-meta/event-meta.component';
 import { LoaderComponent } from './loader/loader.component';
 import { EventsRoutingModule } from '../events/events-routing.module';
+import { EmailDirective } from './validators/email.directive';
 
 
 
@@ -24,6 +25,7 @@ import { EventsRoutingModule } from '../events/events-routing.module';
     BadgeComponent,
     EventMetaComponent,
     LoaderComponent,
+    EmailDirective,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { EventsRoutingModule } from '../events/events-routing.module';
   exports: [
     EventCardComponent,
     LoaderComponent,
+    EmailDirective
   ]
 })
 export class SharedModule { }

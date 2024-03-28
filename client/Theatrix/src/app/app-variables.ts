@@ -1,0 +1,1 @@
+export const VALID_DOMAINS = ['bg', 'com'];
