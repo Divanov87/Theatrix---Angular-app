@@ -1,4 +1,4 @@
-exports.SERVER_NAME = 'Theatrix7';
+exports.SERVER_NAME = 'Theatrix12';
 exports.PORT = 3000;
 exports.DB_CONNECTION = `mongodb://127.0.0.1:27017/${this.SERVER_NAME}DB`;
 exports.SALTS = 10; // default - 10
@@ -9,3 +9,4 @@ exports.USER_MIN_STRENGTH = 3;
 exports.PASS_MIN_STRENGTH = 8;
 exports.CITY_MIN_STRENGTH = 3;
 exports.MAX_STRENGTH = 21;
+exports.ADMIN_IP_ADDRESS = "192.168.1.11"

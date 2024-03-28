@@ -2,22 +2,16 @@ const router = require('express').Router();
 const authService = require('../services/authService');
 const { isAuth, isGuest } = require('../middlewares/authMiddleware');
 const { getErr } = require('../utilities/errHelper');
-const { SESSION_COOKIE_NAME } = require('../configs/envVariables');
+const { SESSION_COOKIE_NAME, ADMIN_IP_ADDRESS } = require('../configs/envVariables');
 
 // --------------------------------- LOGIN -----------------------------------------------
 
 router.post('/login', isGuest, async (req, res) => {
     const { username_email, password } = req.body;
     const userIp = req.ip.toString().replace('::ffff:', '');
-    let role = '';
-    if (userIp === "127.0.0.1") {
-        role = 'admin';
-    } else {
-        role = 'user';
-    }
 
     try {
-        const user = await authService.login(username_email, password, role, userIp);
+        const user = await authService.login(username_email, password, userIp);
         const token = await authService.generateToken(user);
 
         delete user.password;
@@ -34,12 +28,7 @@ router.post('/login', isGuest, async (req, res) => {
 router.post('/register', isGuest, async (req, res) => {
     const { username, password, repeatPassword, email, city } = req.body;
     const userIp = req.ip.toString().replace('::ffff:', '');
-    let role;
-    if (userIp === "127.0.0.1") {
-        role = 'admin';
-    } else {
-        role = 'user';
-    }
+    const role = userIp == ADMIN_IP_ADDRESS || "127.0.0.1" ? 'admin' : 'user';
 
     try {
         const user = await authService.register({ username, password, repeatPassword, email, city, role, userIp });
